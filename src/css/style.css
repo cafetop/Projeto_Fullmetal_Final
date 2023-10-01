@@ -1,0 +1,94 @@
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 55vw;
+
+    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0)65%) no-repeat;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+main .personagem{
+    display: none;
+    height: 100vh;
+}
+
+main .personagem.selecionado {
+    display: block;
+}
+
+main .personagem .img_personagem{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo{
+    position: absolute;
+    top: 0;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 380px;
+    justify-content: center; 
+    z-index: 1;
+    
+}
+
+
+.conteudo .nome_personagem{
+    color: white;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.conteudo .descricao{
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+}
+.conteudo .logo{
+    width: 230px;
+    height: 100px;
+    background-size: cover;
+    background-image: url("../img/logo.png")
+}
+
+.botoes {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    gap: 11px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    
+}
+
+.botoes .botao {
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 450%
+}
+
+.botoes .botao img {
+    border-radius: 50%;
+}
+
+.botoes .botao.selecionado {
+    transform: scale(1.2);
+}
